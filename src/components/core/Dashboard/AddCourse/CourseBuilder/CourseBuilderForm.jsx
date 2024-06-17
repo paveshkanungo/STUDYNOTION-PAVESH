@@ -91,6 +91,7 @@ export default function CourseBuilderForm() {
       toast.error("Please add atleast one lecture in each section")
       return
     }
+    // console.log("I am Inside this goToNext function");
     dispatch(setStep(3))
   }
 
@@ -151,7 +152,7 @@ export default function CourseBuilderForm() {
         >
           Back
         </button>
-        <IconBtn disabled={loading} text="Next" onclick={goToNext}>
+        <IconBtn disabled={loading} text="Next" onClick={goToNext}>
           <MdNavigateNext />
         </IconBtn>
       </div>

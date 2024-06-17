@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SidebarLink from "./SidebarLink";
 import { useNavigate } from "react-router-dom";
 import { VscSignOut } from "react-icons/vsc";
+import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
 import ConfirmationModal from "../../common/ConfirmationModal";
 
 const Sidebar = () => {

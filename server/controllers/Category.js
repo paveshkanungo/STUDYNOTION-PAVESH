@@ -40,11 +40,11 @@ exports.createCategory = async (req, res) => {
 // showAllCategory Handler function
 exports.showAllCategory = async(req, res) => {
     try{
-        const allCategory = await Category.find({}, {name: true, description: true});
+        const allCategory = await Category.find({});
         res.status(200).json({
             success: true,
             message: 'All Category returned successfully',
-            allCategory,
+            data: allCategory,
         });
     }
     catch(error){

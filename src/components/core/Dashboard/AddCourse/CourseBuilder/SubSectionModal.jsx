@@ -105,12 +105,14 @@ export default function SubSectionModal({
     }
 
     const formData = new FormData()
+    console.log(data);
     formData.append("sectionId", modalData)
     formData.append("title", data.lectureTitle)
     formData.append("description", data.lectureDesc)
     formData.append("video", data.lectureVideo)
     setLoading(true)
     const result = await createSubSection(formData, token)
+    console.log(result);
     if (result) {
       // update the structure of course
       const updatedCourseContent = course.courseContent.map((section) =>

@@ -108,10 +108,10 @@ exports.verifyPayment = async (req, res) => {
 // Send Payment Success Email
 exports.sendPaymentSuccessEmail = async (req, res) => {
   const { orderId, paymentId, amount } = req.body
-
+  console.log("INSIDE CONTROLLER... orderId, paymentId, amount: ", orderId, paymentId, amount);
   const userId = req.user.id
 
-  if (!orderId || !paymentId || !amount || !userId) {
+  if (!orderId || !amount || !userId) {
     return res
       .status(400)
       .json({ success: false, message: "Please provide all the details" })
@@ -151,7 +151,7 @@ const enrollStudents = async (courses, userId, res) => {
       // Find the course and enroll the student in it
       const enrolledCourse = await Course.findOneAndUpdate(
         { _id: courseId },
-        { $push: { studentsEnroled: userId } },
+        { $push: { studentsEnrolled: userId } },
         { new: true }
       )
 

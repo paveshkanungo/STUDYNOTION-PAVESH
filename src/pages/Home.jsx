@@ -16,8 +16,7 @@ import LearningLanguageSection from '../components/core/HomePage/LearningLanguag
 import InstructorSection from '../components/core/HomePage/InstructorSection';
 import Footer from '../components/common/Footer';
 import ExploreMore from '../components/core/HomePage/ExploreMore';
-// review slider import remaining
-
+import ReviewSlider from '../components/common/ReviewSlider';
 
 const Home = () => {
   return (
@@ -209,6 +208,7 @@ const Home = () => {
             </h1>
 
             {/* Review Slider Here */}
+            <ReviewSlider/>
         </div>
 
         {/*{Footer} */}
